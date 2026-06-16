@@ -4,7 +4,7 @@
   "title": "Tabstack",
   "description": "Read, research, and act on the web from your keyboard. Powered by Tabstack.",
   "icon": "extension_icon.png",
-  "author": "Tabstack",
+  "author": "JustSteveKing",
   "platforms": [
     "macOS",
     "Windows"
