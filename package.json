@@ -3,7 +3,7 @@
   "name": "tabstack",
   "title": "Tabstack",
   "description": "Read, research, and act on the web from your keyboard. Powered by Tabstack.",
-  "icon": "extension-icon.png",
+  "icon": "extension_icon.png",
   "author": "JustSteveKing",
   "platforms": [
     "macOS",
