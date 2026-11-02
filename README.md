@@ -15,9 +15,9 @@ Tabstack brings the web into Raycast. Turn any page into clean Markdown, get an 
 
 | Command | What it does |
 | --- | --- |
+| **Research a Question** | Get a cited answer pulled from across the web. Choose **Fast** for speed or **Balanced** to consult more sources. |
 | **Extract to Markdown** | Turn any URL into clean, readable Markdown. |
 | **Analyze a Page** | AI summary and analysis of any URL, guided by your instructions. |
-| **Research a Question** | Get a cited answer pulled from across the web. Choose **Fast** for speed or **Balanced** to consult more sources. |
 | **Automate a Task** | Run a read-only browser agent on a page and read the result. |
 
 ## Setup
