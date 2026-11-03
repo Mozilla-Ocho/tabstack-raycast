@@ -26,25 +26,6 @@
   ],
   "commands": [
     {
-      "name": "extract",
-      "title": "Extract to Markdown",
-      "description": "Turn any URL into clean Markdown",
-      "mode": "view",
-      "arguments": [
-        { "name": "url", "placeholder": "https://...", "type": "text", "required": true }
-      ]
-    },
-    {
-      "name": "generate",
-      "title": "Analyze a Page",
-      "description": "AI summary and analysis of any URL",
-      "mode": "view",
-      "arguments": [
-        { "name": "url", "placeholder": "https://...", "type": "text", "required": true },
-        { "name": "instructions", "placeholder": "What should I look for?", "type": "text", "required": true }
-      ]
-    },
-    {
       "name": "research",
       "title": "Research a Question",
       "description": "Get a cited answer from across the web",
@@ -65,6 +46,25 @@
             { "title": "Balanced", "value": "balanced" }
           ]
         }
+      ]
+    },
+    {
+      "name": "extract",
+      "title": "Extract to Markdown",
+      "description": "Turn any URL into clean Markdown",
+      "mode": "view",
+      "arguments": [
+        { "name": "url", "placeholder": "https://...", "type": "text", "required": true }
+      ]
+    },
+    {
+      "name": "generate",
+      "title": "Analyze a Page",
+      "description": "AI summary and analysis of any URL",
+      "mode": "view",
+      "arguments": [
+        { "name": "url", "placeholder": "https://...", "type": "text", "required": true },
+        { "name": "instructions", "placeholder": "What should I look for?", "type": "text", "required": true }
       ]
     },
     {
