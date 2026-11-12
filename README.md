@@ -32,6 +32,10 @@ That's it. Run any command and pass the URL or question as an argument.
 
 Your API key is stored in Raycast preferences and passed directly to the Tabstack SDK. The extension never reads it from environment variables. The **Automate a Task** agent runs with `browse and extract only` guardrails: it reads pages, it does not act on your behalf.
 
+## Feedback
+
+Report a problem or request a feature in [tabstack-feedback](https://github.com/Mozilla-Ocho/tabstack-feedback/issues/new/choose). Include your Raycast version, the command you ran, and the error message it showed. Never paste your API key or personal data into an issue.
+
 ## License
 
 MIT
