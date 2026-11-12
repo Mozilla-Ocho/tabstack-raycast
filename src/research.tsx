@@ -1,7 +1,7 @@
 import { Action, ActionPanel, Detail, LaunchProps, Toast, getPreferenceValues, showToast } from "@raycast/api";
 import { PermissionDeniedError } from "@tabstack/sdk";
 import { useEffect, useState } from "react";
-import { friendlyError, getClient } from "./lib/tabstack";
+import { apiReason, friendlyError, getClient } from "./lib/tabstack";
 
 export default function Command(props: LaunchProps<{ arguments: Arguments.Research }>) {
   const { query } = props.arguments;
@@ -82,9 +82,9 @@ export default function Command(props: LaunchProps<{ arguments: Arguments.Resear
         // naming the mode. Any other 403 in Balanced mode keeps the API's reason and adds the Fast tip.
         let message = friendlyError(error);
         if (error instanceof PermissionDeniedError && mode === "balanced") {
-          message = /research mode/i.test(error.message)
+          message = /research mode/i.test(apiReason(error) ?? error.message)
             ? "Balanced research needs a Team or Pro plan. Set Depth to Fast in the command preferences."
-            : `${message.replace(/\.?$/, ".")} If your plan does not include Balanced research, set Depth to Fast in the command preferences.`;
+            : `${message} If your plan does not include Balanced research, set Depth to Fast in the command preferences.`;
         }
         setMarkdown(`## Research failed\n\n${message}`);
         toast.style = Toast.Style.Failure;
