@@ -34,7 +34,7 @@ Your API key is stored in Raycast preferences and passed directly to the Tabstac
 
 ## Feedback
 
-Report a problem or request a feature in [tabstack-feedback](https://github.com/Mozilla-Ocho/tabstack-feedback/issues/new/choose). Include the extension version and the `x-trace-id` from the failing response when relevant. Never paste API keys or personal data into an issue.
+Report a problem or request a feature in [tabstack-feedback](https://github.com/Mozilla-Ocho/tabstack-feedback/issues/new/choose). Include your Raycast version, the command you ran, and the error message it showed. Never paste your API key or personal data into an issue.
 
 ## License
 
