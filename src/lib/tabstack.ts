@@ -1,6 +1,7 @@
 import Tabstack, {
   AuthenticationError,
   InternalServerError,
+  PermissionDeniedError,
   RateLimitError,
   TabstackError,
   UnprocessableEntityError,
@@ -27,6 +28,9 @@ export function friendlyError(error: unknown): string {
   }
   if (error instanceof RateLimitError) {
     return "Rate limited. Wait a moment and try again.";
+  }
+  if (error instanceof PermissionDeniedError) {
+    return `Tabstack did not allow this request: ${error.message.replace(/^403\s*/, "")}`;
   }
   if (error instanceof UnprocessableEntityError) {
     return "That URL could not be processed. Check it is public and reachable.";
