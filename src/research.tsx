@@ -1,4 +1,5 @@
 import { Action, ActionPanel, Detail, LaunchProps, Toast, getPreferenceValues, showToast } from "@raycast/api";
+import { PermissionDeniedError } from "@tabstack/sdk";
 import { useEffect, useState } from "react";
 import { friendlyError, getClient } from "./lib/tabstack";
 
@@ -77,7 +78,11 @@ export default function Command(props: LaunchProps<{ arguments: Arguments.Resear
         }
       } catch (error) {
         if (cancelled) return;
-        const message = friendlyError(error);
+        // The API rejects a research mode outside the account's plan with a 403 before streaming.
+        const message =
+          error instanceof PermissionDeniedError && mode === "balanced"
+            ? "Balanced research needs a Team or Pro plan. Set Depth to Fast in the command preferences."
+            : friendlyError(error);
         setMarkdown(`## Research failed\n\n${message}`);
         toast.style = Toast.Style.Failure;
         toast.title = "Failed";

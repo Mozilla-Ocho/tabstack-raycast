@@ -6,4 +6,4 @@
 - **Extract to Markdown**: turn any URL into clean, readable Markdown.
 - **Analyze a Page**: AI summary and analysis of any URL from your own instructions.
 - **Automate a Task**: run a read-only browser agent on a page and read back the result.
-- Friendly error handling for authentication, rate limit, unprocessable URL, and server errors.
+- Friendly error handling for authentication, rate limit, Balanced research outside a Team or Pro plan, unprocessable URL, and server errors.
