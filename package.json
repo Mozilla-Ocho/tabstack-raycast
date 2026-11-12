@@ -37,7 +37,7 @@
         {
           "name": "researchMode",
           "title": "Depth",
-          "description": "Fast is quicker; Balanced consults more sources",
+          "description": "Fast is quicker; Balanced consults more sources (Team and Pro plans)",
           "type": "dropdown",
           "default": "fast",
           "required": false,

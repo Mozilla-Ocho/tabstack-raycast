@@ -2,7 +2,7 @@
 
 ## [Initial Version] - {PR_MERGE_DATE}
 
-- **Research a Question**: cited answers from across the web, with Fast and Balanced depth modes.
+- **Research a Question**: cited answers from across the web, with Fast and Balanced depth modes (Balanced on Team and Pro plans).
 - **Extract to Markdown**: turn any URL into clean, readable Markdown.
 - **Analyze a Page**: AI summary and analysis of any URL from your own instructions.
 - **Automate a Task**: run a read-only browser agent on a page and read back the result.
