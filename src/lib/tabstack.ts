@@ -30,7 +30,10 @@ export function friendlyError(error: unknown): string {
     return "Rate limited. Wait a moment and try again.";
   }
   if (error instanceof PermissionDeniedError) {
-    return `Tabstack did not allow this request: ${error.message.replace(/^403\s*/, "")}`;
+    const reason = error.message.replace(/^403\s*/, "").replace(/^status code \(no body\)$/, "");
+    return reason
+      ? `Tabstack did not allow this request: ${reason}`
+      : "Tabstack did not allow this request. Check your plan and API key.";
   }
   if (error instanceof UnprocessableEntityError) {
     return "That URL could not be processed. Check it is public and reachable.";

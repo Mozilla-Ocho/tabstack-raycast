@@ -79,12 +79,13 @@ export default function Command(props: LaunchProps<{ arguments: Arguments.Resear
       } catch (error) {
         if (cancelled) return;
         // The API rejects a research mode outside the account's plan with a 403 before streaming,
-        // naming the mode and the plan. Other 403s keep the API's own reason via friendlyError.
-        const planRejected =
-          error instanceof PermissionDeniedError && mode === "balanced" && /research mode/i.test(error.message);
-        const message = planRejected
-          ? "Balanced research needs a Team or Pro plan. Set Depth to Fast in the command preferences."
-          : friendlyError(error);
+        // naming the mode. Any other 403 in Balanced mode keeps the API's reason and adds the Fast tip.
+        let message = friendlyError(error);
+        if (error instanceof PermissionDeniedError && mode === "balanced") {
+          message = /research mode/i.test(error.message)
+            ? "Balanced research needs a Team or Pro plan. Set Depth to Fast in the command preferences."
+            : `${message.replace(/\.?$/, ".")} If your plan does not include Balanced research, set Depth to Fast in the command preferences.`;
+        }
         setMarkdown(`## Research failed\n\n${message}`);
         toast.style = Toast.Style.Failure;
         toast.title = "Failed";

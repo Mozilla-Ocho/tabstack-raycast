@@ -26,11 +26,11 @@ Tabstack brings the web into Raycast. Ask a question and get a cited answer from
 2. Create an API key at [console.tabstack.ai](https://console.tabstack.ai).
 3. Paste the key into the extension's **Tabstack API Key** preference.
 
-That's it — run any command and pass the URL or question as an argument.
+That's it. Run any command and pass the URL or question as an argument.
 
 ## Privacy
 
-Your API key is stored in Raycast preferences and passed directly to the Tabstack SDK. The extension never reads it from environment variables. The **Automate a Task** agent runs with `browse and extract only` guardrails — it reads pages, it does not act on your behalf.
+Your API key is stored in Raycast preferences and passed directly to the Tabstack SDK. The extension never reads it from environment variables. The **Automate a Task** agent runs with `browse and extract only` guardrails: it reads pages, it does not act on your behalf.
 
 ## License
 
